@@ -13,8 +13,8 @@
     const [showCamera, setShowCamera] = useState(false);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [processingProgress, setProcessingProgress] = useState(0);
-
-    const API_ENDPOINT = '/api/v1/recognize-face';
+    const API_BASE_URL = import.meta.env.VITE_API_URL
+    const API_ENDPOINT = `${API_BASE_URL}/api/v1/recognize-face`
 
     const resetApp = () => {
       setAppState('idle');
